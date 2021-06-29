@@ -1,0 +1,435 @@
+/* Basic styling */
+
+* {
+    font-family: "Bad script", Ariel, sans-serif;
+    font-size: 14px;
+}
+h1{
+    background-color: #ffc0cb;
+    background-size: cover;
+    color: #000000;
+    padding-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+.border {
+    background: url(leafygarland4.jpg)no-repeat;
+    background size: cover;
+    background-position: center;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#container {
+    flex: 1;
+    min-width: 100vw;
+}
+#container:after{
+    content: "";
+    display: block;
+}
+
+/*contact page*/
+#container iframe {
+	display: block;
+	width: 100vw;
+}
+.right img{
+    display: none;
+}
+/*home page*/
+.header{
+    text-align: center;
+}
+.para{
+    text-align: center;
+}
+/*about page*/
+h2{
+    text-align: left;
+    padding: .5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-style: bold;
+}
+p{
+    text-align: left;
+    font-size: 1.5rem;
+    font-style: bold;
+}
+/*navbar*/
+nav {
+    background: #000000;
+    padding: -.5rem 0rem;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.active {
+	color: #7cfc00;
+}
+.menu,
+.submenu {   
+    list-style-type: none;
+}
+
+.item {
+    padding: 1px 40px;
+    padding-right: 5rem;
+}
+.item.button {
+	padding: 10px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #7fffd4;
+}
+/*.row {
+	display: none;
+}*/
+/*footer*/
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
+}
+footer {
+    background: #e0fa64;
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5rem;
+}/*navbar Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+.menu li.subitem a {
+    padding: 15px;
+}
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+.item.button {
+	order: 2;
+}
+.item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.active .item {
+    display: block;
+}
+
+/*navbar Submenu up from mobile screens */
+.submenu {
+    display: none;
+}
+.submenu-active .submenu {
+   display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
+    color: #ffffff;
+    padding-left: 5px;
+}
+.subitem a {
+    padding: 10px 15px;
+}
+.submenu-active {
+    background-color: #111;
+    border-radius: 3px;
+}
+/*navbar Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+	.item.button {
+		width: auto;
+		order: 1;
+		display: block;
+	}   
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .button a {
+        background: #0080ff;
+        border: 1px #4169e1 solid;
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #4169e1;
+        border-color: #00008b;
+    }
+}
+/*navbar Desktop menu */
+@media all and (min-width: 700px) {
+   .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 68px;
+        background: #111;
+    }
+    .toggle {
+        display: none;
+    }
+    .submenu-active {
+        border-radius: 0;
+    }
+}
+ @media all and (min-width: 700px){
+   /*about*/
+	 .container3 {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+    .center{
+        display: inline-block;
+        float: right;
+        width: 40%;
+        margin: auto;
+        margin-left:15px;
+        margin-right: 15px;
+        padding-top: 40px;
+        padding-right: 30px;
+        text-align: left;
+        href: none;
+    }
+
+	/*home page*/
+    .center2{
+        text-align: center;
+    }
+    .container2 img{
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+    }
+    /*contact page*/
+	 
+    #container iframe{
+        display: inline-block;
+        float: left;
+        width: 50%;
+        margin: 2px;
+		left-margin: 10px;
+    }  
+    .right img{
+        display: inline-block;
+        float: right;
+        width: 40%;
+        position: center;
+        padding-right: 5%;
+    }
+}
+  /** {
+  box-sizing: border-box;
+}
+/*carousel*/
+/* Position the image container (needed to position the left and right arrows) */
+.row {
+	display: none;
+}
+.prev,
+	.next {
+  		cursor: pointer;
+  		position: center;
+  		top: 60%;
+  		width: auto;
+  		padding: 16px;
+  		margin-top: 60px;
+  		color: #000000;
+  		font-weight: bold;
+  		font-size: 20px;
+  		border-radius: 0 3px 3px 0;
+  		transition: 0.6s ease;
+  		user-select: none;
+  		-webkit-user-select: none;
+	}
+
+/* Position the "next button" to the right */
+	.next {
+  		right: 5;
+  		border-radius: 3px 0 0 3px;
+	}
+	.prev {
+		left: 1;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+  		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+/* Number text (1/3 etc) */
+	.numbertext {
+  		color: #00008b;
+  		font-size: 12px;
+  		padding: 8px 12px;
+  		position: center;
+  		top: 0;
+	}
+
+/* Container for image text */
+	.caption-container {
+  		text-align: center;
+  		background-color: #222;
+  		padding: 2px 16px;
+  		color: #ffffff;
+	}
+
+	.row:after {
+  		content: "";
+  		display: table;
+  		clear: both;
+	}
+
+	
+/* Hide the images by default */
+.mySlides.img {
+  display: none;
+}
+@media all and (min-width: 700px){
+/* Add a pointer when hovering over the thumbnail images */
+	.containergallery {
+		max-width: 400px;
+		postion: relative;
+		margin: auto;
+	}
+	.mySlides {
+		max-width: 400px;
+		position: center;
+		margin: auto;
+	}
+	.cursor {
+  		cursor: pointer;
+	}
+
+/* Next & previous buttons */
+	.prev,
+	.next {
+  		cursor: pointer;
+  		position: center;
+  		top: 60%;
+  		width: auto;
+  		padding: 16px;
+  		margin-top: 60px;
+  		color: black;
+  		font-weight: bold;
+  		font-size: 20px;
+  		border-radius: 0 3px 3px 0;
+  		transition: 0.6s ease;
+  		user-select: none;
+  		-webkit-user-select: none;
+	}
+
+/* Position the "next button" to the right */
+	.next {
+  		right: 5;
+  		border-radius: 3px 0 0 3px;
+	}
+	.prev {
+		left: 1;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+  		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+/* Number text (1/3 etc) */
+	.numbertext {
+  		color: #00008b;
+  		font-size: 12px;
+  		padding: 8px 12px;
+  		position: center;
+  		top: 0;
+	}
+
+/* Container for image text */
+	.caption-container {
+  		text-align: center;
+  		background-color: #222;
+  		padding: 2px 16px;
+  		color: #ffffff;
+	}
+	.row {
+		display: inline-block;
+		margin: auto;
+	}
+	.row:after {
+  		content: "";
+  		display: table;
+  		clear: both;
+	}
+
+/* Six columns side by side */
+	.column {
+  		float: left;
+  		width: 16%;
+  		margin: auto;
+	}
+	
+/* Add a transparency effect for thumnbail images */
+	.demo {
+  		opacity: 0.6;
+	}
+
+	.active,
+		.demo:hover {
+  		opacity: 1;
+	}
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kathleen Walrath Painting - Birds</title>
+	<link rel="stylesheet" href="css/kwpaint.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+	<header>
+		<h1 class=border>Watercolors by Kathleen...</h1>
+		<nav>
+			<ul class="menu">
+				<li class="item"><a href="index.html">Home</a></li>
+				<li class="item"><a href="about.html">About</a></li>
+				<li class="item has-submenu">
+            		<a tabindex="0" class="active">Gallery</a>
+					<ul class="submenu">
+						<li class="subitem"><a href="caribbean.html">Caribbean</a></li>
+						<li class="subitem"><a href="animals.html">Animals</a></li>
+						<li class="subitem"><a href="birds.html">Birds</a></li>
+						<li class="subitem"><a href="landscape.html">Landscape</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="contact.html">Contact</a></li>
+				<li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+	<div>
+		<!-- Container for the image gallery -->
+        <div class="containergallery">
+
+        <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="css/birds/owl.jpg" alt="owl" style="width:90%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                    <img src="css/birds/hummingbird.jpg" alt="hummingbird" style="width:90%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                    <img src="css/birds/chickadee.jpg" alt="chickadee" style="width:90%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                    <img src="css/birds/cardinal.jpg" alt="cardinal" style="width:90%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                    <img src="css/birds/bluebunting-4.jpg" alt="indigo bunting" style="width:90%">
+            </div>
+		    <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                    <img src="css/birds/barnowl.jpg" alt="barn owl" style="width:90%">
+            </div>
+
+  <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+  <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                	<img class="demo cursor" src="css/birds/Owl.jpg" style="width:90%" onclick="currentSlide(1)" alt="Night Owl">
+            	</div>
+                <div class="column">
+                	<img class="demo cursor" src="css/birds/hummingbird.jpg" style="width:90%" onclick="currentSlide(2)" alt="Hummingbird">
+            	</div>
+            	<div class="column">
+                	<img class="demo cursor" src="css/birds/chickadee.jpg" style="width:90%" onclick="currentSlide(3)" alt="Chickadee">
+            	</div>
+            	<div class="column">
+                	<img class="demo cursor" src="css/birds/cardinal.jpg" style="width:90%" onclick="currentSlide(4)" alt="Cardinal">
+            	</div>
+            	<div class="column">
+                	<img class="demo cursor" src="css/birds/bluebunting-4.jpg" style="width:90%" onclick="currentSlide(5)" alt="Indigo Bunting">
+            	</div>
+            	<div class="column">
+                	<img class="demo cursor" src="css/birds/barnowl.jpg" style="width:90%" onclick="currentSlide(6)" alt="Barn Owl from tutorial by The Frugal Crafter">
+            	</div>
+        	</div>
+		</div>
+    </div>
+  <footer class="footer">Kathleen Walrath - Corning, NY - XXX-XXX-XXXX</footer>
+</body>
+<script src="js/kwpaint.js"></script>
+</html>

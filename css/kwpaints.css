@@ -1,0 +1,326 @@
+
+$gradient-start :#ed6ea0;
+$gradient-end :#ec8c69;
+body{
+	font-family: Bad script; Ariel; Sans-serif;
+	color: #fff;
+	background-color: #9791d6;
+	display: flex;
+    height: 100vh;
+    padding: 0 5rem;
+    border-box: #9791d6;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    }
+header{
+	background-color: #9791d6;
+	background-size: cover;
+	padding: 5px;
+	border-radius: 4px;
+	border: 3px solid #f6f6db;
+	text-transform: small-caps;
+	font-family: Bad script; Ariel; Sans-serif;
+}
+h1{
+	color: #fff; 
+	text-align: center;
+	text-decoration: none
+}
+
+.navbar .dropdown .dropbtn {
+  background: linear-gradient(to right, $gradient-start 0%, $gradient-end 100%);
+  border-radius:0.5rem;
+  box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+ }
+ .navbar a{
+ 	float: left;
+ 	display: flex;
+ 	padding: 14px 16px; 
+ 	font-family: Bad script; Ariel; Sans-serif;
+   	color: #fff;
+   	text-align: center;
+   	text-decoration: none;
+   	font-weight: 300;
+   	/*&:focus,
+   	&:focus-within{
+    outline:none;
+ 	}*/
+}
+.active {
+	background-color: purple;
+	color: blue;
+}
+.navbar .icon {
+	display: none;
+}
+}
+ /*div{
+    display: inline-flex;
+    align:center;
+}
+    a{
+      	position: center;
+      	display: inline-flex;
+      	align-items: center;
+      	justify-content: center;
+      	list-style-type: none;
+      	font-size: -150;
+      	margin: 4px;
+      	padding: 3px; 
+    	}*/	
+  .dropdown {
+  	position: center;
+  	display: block;
+  	text-align: center;
+  	float: center;
+  	overflow: hidden;
+  }
+  .dropdown .dropbtn {
+	background-color: #9791d6;
+	position: center;
+	display: block;
+	padding: 12px 16px;
+	text-align: center; 
+  	color: #fff;
+  	font-family: Bad script; Ariel; Sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    margin: 0;
+    /*&:focus,
+    	&:focus-within{
+    	outline:none;
+    	margin: 0;*/
+    
+}
+    
+    .navbar a:hover,
+    .dropdown:hover
+    .dropbtn {
+    	background-color: blue
+    }
+    .dropdown-content {
+    	display: none;
+    	position: relative;
+    	background-color: inherit;
+    	min-width: 160px
+    	/*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    	z-index: 1;*/
+    }
+    .dropdown-content a {
+    	float: center;
+    	color: black;
+    	padding: none;
+    	text-decoration: none;
+    	display: block;
+    	text-align: left;
+    }
+    .dropdown-content a {
+    	float: none;
+    	color: black;
+    	padding: 12px 16px;
+    	text-decoration: none;
+    	display: block;
+    	text-align: left;
+    	background-color:inherit;
+    }
+    .dropdown:hover .dropdown-content {
+    	display: block;
+    }
+   @media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: center;
+    display: block;
+  }
+}
+
+@media(min-width: 45rem){
+  .navbar{
+    > div{
+      justify-content: space-around;
+      &:hover,
+      &:focus-within{
+        > a:first-child{
+          > a{
+              opacity:0.6;
+          }
+        }
+      }
+      > a {
+        flex: 1 1 0;
+        &:last-child:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          bottom: 0;
+          margin-right: -50%;
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 0.5rem;
+          z-index: 0;    
+          transition: 350ms cubic-bezier(1, 0.49, 0.09, 1.29) all;
+          pointer-events: none;
+        }
+        @for $i from 1 to 12 {
+          &:first-child:nth-last-child( #{$i} ) ~ a:last-child:after{          
+                right: 50% + 100% * ($i - 1);
+            }
+        }
+        @for $i from 1 to 12 {
+          &:first-child:nth-last-child( #{$i} ),
+          &:first-child:nth-last-child( #{$i} ) ~ a{          
+            @for $j from 1 to $i {
+              &:nth-child( #{$j} ):hover,
+              &:nth-child( #{$j} ):focus,
+              &:nth-child( #{$j} ):focus-within{     
+                ~ a:last-child:after{
+                  right: 50% + 100% * ($i - $j);
+                }
+                > div a{
+                  box-shadow: inset 0 0 0 3rem rgba(0, 0, 0, 0), inset 0 0 0 3rem rgba(237, 110, 160, (1 - (1/$i)*$j));
+                  &:hover,
+                  &:focus,
+                  &:focus-within{
+                  box-shadow: inset 0 0 0 3rem rgba(0, 0, 0, 0.1), inset 0 0 0 3rem rgba(237, 110, 160, (1 - (1/$i)*$j));
+                  }
+                }
+              } 
+              &:last-child:hover:after,
+              &:last-child:focus:after,
+              &:last-child:focus-within:after{
+                right: 50%;
+              }
+            }
+          }
+        }
+        &:first-child{
+          > a{
+              opacity:1;
+          }
+        }
+        > a{
+          padding: 2rem 0;
+          font-size: 1.6vw;
+          position: relative;
+          width: 100%;
+          text-align: center;
+          z-index: 1;
+          opacity:0.7;
+          transition: 250ms ease all;
+        }
+        > div{
+          position:absolute;
+          top:100%;
+          left:0;
+          width: 100%;
+          visibility: hidden;
+          > a{
+            margin-top:0.5rem;
+            transition: 250ms cubic-bezier(0.42, 0.83, 0.49, 1.35) transform;
+            transform: scale(0);
+            > a{            
+              display: block;
+              text-align: center;
+              border-radius: 0.2rem;
+              padding: 1rem 0.5rem;
+              font-size: 1.4vw;
+              background: $gradient-end;
+              color: rgba(255,255,255,0.6);
+              transition: 250ms ease all;
+              &:hover,
+              &:focus,
+              &:focus-within{
+                box-shadow: inset 0 0 0 3rem rgba(0,0,0,0.1);
+                color: rgba(255,255,255,1);
+              }
+            }
+          }
+        }
+        &:hover,
+        &:focus,
+        &:focus-within{
+            > a{
+              opacity: 1 !important;
+            }
+            > div{    
+              visibility: visible;  
+              > a{
+                transform: scale(1);
+                &:first-child{
+                  transition-delay: 150ms;
+                }
+              }
+              @for $k from 1 to 12 {
+                > a:nth-child( #{$k} ){ 
+                  transition-delay: 150ms * $k;
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 45rem){
+  .navbar{
+    background-image: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%);
+    a{
+      font-size:1.4rem;
+      padding: 1rem 0.5rem;
+    }
+    > div{
+      flex-direction: column;
+      > a {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        > a:nth-last-child(2){
+          position:relative;
+          &:after{
+            content:'';
+            position:absolute;
+            top: 50%;
+            margin-top: -0.25rem;
+            right: 1.5rem;
+            border-top: 0.5rem solid #fff;
+            border-left: 0.3rem solid transparent;
+            border-right: 0.3rem solid transparent;
+            transition: 250ms ease all;
+          }
+        }
+        &:focus-within,
+        &:focus,
+        > a:hover,
+        > a:focus-within,
+        > a:focus{
+          &:nth-last-child(2){
+            &:after{
+              transform: rotate(180deg);
+            }
+          }
+          + div{
+            max-height: 12rem;
+          }
+        }
+        > div{
+          background: rgba(0,0,0,0.1);
+          box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+          overflow:hidden;
+          max-height:0;
+          transition: 250ms ease all;
+          > a{
+            a{
+              display:block;
+              font-size:1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
